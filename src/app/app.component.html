@@ -5,7 +5,7 @@
   <div class="field">
     <label for="title">Title:</label>
     <!-- # (hash) tell Angular to assign the tags (#newtitle and #newlink) to a local variable -->
-    
+
     <!-- This markup tells Angular to bind this <input> to the variable newtitle . The #newtitle syntax
     is called a resolve. The effect is that this makes the variable newtitle available to the expressions
     within this view. -->
@@ -22,3 +22,6 @@
   </button>
 </form>
 
+<div class="ui grid posts">
+  <app-article *ngFor="let foobar of articles" [article]="foobar"></app-article>
+</div>
